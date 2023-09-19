@@ -7,5 +7,3 @@ const ThemeSwitcher = ({ toggleTheme }) => {
     </Button>
   );
 }
-
-export default ThemeSwitcher;
