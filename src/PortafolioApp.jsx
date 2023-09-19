@@ -1,25 +1,20 @@
-import { ThemeProvider } from "@mui/material/styles";
-import Home from "./pages/home";
-import { darkTheme, lightTheme } from "./theme/themeSettings";
 import { useState } from "react";
 
-
-
-
+import Home from "./pages/home";
+import { darkTheme, lightTheme } from "./theme/themeSettings";
+import { ThemeProvider } from "@mui/material";
 
 const PortafolioApp = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightTheme);
+  const [currentTheme, setCurrentTheme] = useState(darkTheme);
 
   const toggleTheme = () => {
-    setCurrentTheme(currentTheme === lightTheme ? darkTheme : lightTheme);
+    setCurrentTheme(currentTheme === darkTheme ? lightTheme : darkTheme);
   };
 
   return (
     <>
       <ThemeProvider theme={currentTheme}>
-        
-        <Home toggleTheme={toggleTheme} />
-      
+        <Home toggleTheme={toggleTheme}/>
       </ThemeProvider>
     </>
   );

@@ -1,14 +1,22 @@
 import Grid from "@mui/material/Grid";
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import ThemeButton from "../../theme/themeButton";
 
-import ThemeSwitcher from "../../theme/themeButton";
+
 
 const HeaderSection = ({toggleTheme}) => {
   return (
     <>
       <Grid>
-        
-          <ThemeSwitcher toggleTheme={toggleTheme}/>
+        <AppBar position="fixed" color="inherit">
+          <Toolbar>
+            
+              <ThemeButton toggleTheme={toggleTheme}/>
+            
+          </Toolbar>
+        </AppBar>
+          
       </Grid>
     </>
   );
