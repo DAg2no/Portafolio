@@ -1,8 +1,7 @@
 import IconButton from "@mui/material/IconButton";
 import { useTheme } from "@mui/material/styles";
-import NightsStayIcon from "@mui/icons-material/NightsStay";
-import WbTwilightIcon from "@mui/icons-material/WbTwilight";
 
+import AppleIcon from '@mui/icons-material/Apple';
 
 
 const ThemeButton = ({ toggleTheme }) => {
@@ -11,7 +10,7 @@ const ThemeButton = ({ toggleTheme }) => {
   return (
     <IconButton onClick={toggleTheme}>
       
-      {theme.palette.mode === "dark" ? <NightsStayIcon /> : <WbTwilightIcon />}
+      {theme.palette.mode === "dark" ? <AppleIcon /> : <AppleIcon />}
     </IconButton>
   );
 };

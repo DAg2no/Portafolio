@@ -10,7 +10,6 @@ const HeaderSection = ({ toggleTheme }) => {
     <>
       <Grid
         container
-        spacing={1}
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -19,15 +18,9 @@ const HeaderSection = ({ toggleTheme }) => {
       >
         <Grid>
           <AppBar position="fixed" color="inherit">
-            <Toolbar>
+            <Toolbar >
               <ThemeSwitch toggleTheme={toggleTheme} />
-              <Typography
-                variant="h4"
-                color="inherit"
-                sx={{ flexGrow: 1, textAlign: "center" }}
-              >
-                HI!
-              </Typography>
+              
             </Toolbar>
           </AppBar>
         </Grid>
