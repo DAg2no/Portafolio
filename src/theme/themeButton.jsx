@@ -3,11 +3,14 @@ import { useTheme } from "@mui/material/styles";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import WbTwilightIcon from "@mui/icons-material/WbTwilight";
 
+
+
 const ThemeButton = ({ toggleTheme }) => {
-  const theme = useTheme(); // Obtén el tema actual
+  const theme = useTheme(); 
 
   return (
     <IconButton onClick={toggleTheme}>
+      
       {theme.palette.mode === "dark" ? <NightsStayIcon /> : <WbTwilightIcon />}
     </IconButton>
   );

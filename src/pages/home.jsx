@@ -1,9 +1,12 @@
 import Grid from "@mui/material/Grid";
-
 import HeaderSection from "../components/Header/HeaderSection";
+
 const Home = ({toggleTheme}) => {
+  
   return (
     <>
+   
+
       <Grid
         container
         spacing={1}
@@ -15,6 +18,7 @@ const Home = ({toggleTheme}) => {
       >
         <HeaderSection toggleTheme={toggleTheme}/>
       </Grid>
+   
     </>
   );
 };
