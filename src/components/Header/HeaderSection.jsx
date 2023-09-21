@@ -35,14 +35,14 @@ const HeaderSection = ({ toggleTheme }) => {
         <AppBar position="static" sx={{ backgroundColor: "#000000" }}>
           <Toolbar>
             <ThemeSwitch toggleTheme={toggleTheme} />
-         
+
             <Hidden mdUp>
-                <IconButton
-                edge='start'
+              <IconButton
+                edge="start"
                 color="inherit"
                 aria-label="menu"
                 onClick={toggleDrawer}
-                sx={{marginLeft: '1rem'}}
+                sx={{ marginLeft: "1rem" }}
               >
                 <MenuIcon />
               </IconButton>
@@ -83,7 +83,7 @@ const HeaderSection = ({ toggleTheme }) => {
           <Hidden lgDown>
             <Box>
               <img
-                src="public/pc.png"
+                src="https://raw.githubusercontent.com/DAg2no/Portafolio/master/public/pc.png"
                 alt="PC"
                 style={{ width: 250, height: 250 }}
               />
