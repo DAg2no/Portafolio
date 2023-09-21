@@ -1,17 +1,16 @@
 import IconButton from "@mui/material/IconButton";
-import { useTheme } from "@mui/material/styles";
-
 import AppleIcon from '@mui/icons-material/Apple';
 
 
 const ThemeButton = ({ toggleTheme }) => {
-  const theme = useTheme(); 
+  
 
   return (
-    <IconButton onClick={toggleTheme}>
-      
-      {theme.palette.mode === "dark" ? <AppleIcon /> : <AppleIcon />}
+    <IconButton onClick={toggleTheme} size="1rem">
+      <AppleIcon sx={{color: '#ffff'}}/>
     </IconButton>
+    
+      
   );
 };
 

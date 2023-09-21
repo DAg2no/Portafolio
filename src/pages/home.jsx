@@ -9,8 +9,6 @@ const Home = ({toggleTheme}) => {
 
       <Grid
         container
-        spacing={1}
-        direction="row"
         justifyContent="center"
         alignItems="center"
         alignContent="center"
