@@ -3,7 +3,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import Home from "./pages/home/home";
 import { darkTheme, lightTheme } from "./theme/themeSettings";
 
-const PortafolioApp = () => {
+const PortafolioApp = ()  => {
   
 const [currentTheme, setCurrentTheme] = useState(darkTheme);
 

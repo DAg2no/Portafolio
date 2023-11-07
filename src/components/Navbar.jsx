@@ -50,6 +50,7 @@ import { navLinks } from "../helpers/navLinks";
       </AppBar>
     );
   };
+
   
   export default NavBar;
   

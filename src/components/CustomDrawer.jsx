@@ -1,22 +1,28 @@
-import { Drawer, List, ListItem, ListItemButton } from "@mui/material";
+import { Drawer, List, ListItem, ListItemButton, Typography } from "@mui/material";
+import { navLinks } from "../helpers/navLinks";
 
 const CustomDrawer = ({ isDrawerOpen, toggleDrawer }) => {
+
+
+  const renderDrawerList = () => {
+    return (
+      <List>
+        {navLinks.map((link, index) => (
+          <ListItem key={index}>
+            <ListItemButton onClick={toggleDrawer}>
+              <Typography variant="h6" color="inherit" fontSize="1.1rem">
+                {link.text}
+              </Typography>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    );
+  };
+
   return (
     <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
-      <List>
-        <ListItem>
-          <ListItemButton primary="Portafolio" />
-        </ListItem>
-        <ListItem>
-          <ListItemButton primary="Projects" />
-        </ListItem>
-        <ListItem>
-          <ListItemButton primary="Description" />
-        </ListItem>
-        <ListItem>
-          <ListItemButton primary="Contacts" />
-        </ListItem>
-      </List>
+      {renderDrawerList()}
     </Drawer>
   );
 };
