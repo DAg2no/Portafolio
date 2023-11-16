@@ -5,29 +5,38 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { createBrowserRouter } from "react-router-dom";
+/* import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ErrorPage } from "./pages/ErrorPage.jsx";
 import { Description } from "./pages/Description.jsx";
-import { RouterProvider } from "react-router";
 import { Contact } from "./pages/Contact.jsx";
 
-const router = createBrowserRouter([
-  {
-      path: '/',
-      element: <PortafolioApp />,
-  },
-  {
-    path: 'description',
-    element: <Description />,
-  },
-  {
-    path: 'contact',
-    element: <Contact/>,
-  },
-])
+ */
 
+
+
+
+/* const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <PortafolioApp/>,
+    errorElement: <ErrorPage/>,
+  },
+  {
+    path: "/description",
+    element: <Description />,
+    errorElement: <ErrorPage/>,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+    errorElement: <ErrorPage/>,
+  },
+]) */
 
 ReactDOM.createRoot(document.getElementById("root")).render(
    <React.StrictMode>
-     <RouterProvider router={router}/>,
+     {/* <RouterProvider router={router}/> */}
+
+     <PortafolioApp/>
    </React.StrictMode>
 );

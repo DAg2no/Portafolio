@@ -1,6 +1,5 @@
 import {
     AppBar,
-    Button,
     Hidden,
     IconButton,
     Stack,
@@ -8,19 +7,21 @@ import {
     Typography,
   } from "@mui/material";
   import MenuIcon from "@mui/icons-material/Menu";
-  import ThemeSwitch from "../theme/themeButton";
-import { navLinks } from "../helpers/navLinks";
+  import ThemeSwitch from "../../theme/themeButton";
+import { navLinks } from "../../helpers/navLinks";
+import { Link } from "react-router-dom";
 
   
   
   const NavBar = ({ toggleDrawer, toggleTheme }) => {
+
     const renderNavButtons = () => {
       return navLinks.map((link, index) => (
-        <Button key={index} variant="text" color="inherit" href={link.link}>
+        <Link key={index} to={link.link} style={{textDecoration: 'none', color: 'inherit',}}>
           <Typography variant="h6" color="inherit" fontSize="1.1rem">
             {link.text}
           </Typography>
-        </Button>
+        </Link>
       ));
     };
   
@@ -42,7 +43,7 @@ import { navLinks } from "../helpers/navLinks";
           </Hidden>
   
           <Hidden mdDown>
-            <Stack direction="row">
+            <Stack direction="row" spacing={2}>
               {renderNavButtons()}
             </Stack>
           </Hidden>
@@ -53,4 +54,3 @@ import { navLinks } from "../helpers/navLinks";
 
   
   export default NavBar;
-  

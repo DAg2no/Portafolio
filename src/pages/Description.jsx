@@ -1,7 +1,18 @@
+import { Grid } from "@mui/material"
+
 export const Description = () => {
   return (
     <>
-    <h1>HOLA mudno</h1>
+    <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        alignContent="center"
+        wrap="wrap"
+      >
+ 
+      </Grid>
     </>
   )
 }

@@ -1,32 +1,52 @@
-import { useState } from "react";
-
 import {
   Avatar,
   Box,
   Card,
   CardContent,
+  Chip,
   Container,
   Grid,
   Typography,
 } from "@mui/material";
 
 import "./styles.css";
-import CustomDrawer from "../../components/CustomDrawer";
-import NavBar from "../../components/Navbar";
+import CustomDrawer from "../../components/Navbar/CustomDrawer";
+import NavBar from "../../components/Navbar/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBootstrap, faCss3Alt, faHtml5, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
 import { blue, indigo, lime, purple } from "@mui/material/colors";
+import { projectCard } from "../../helpers/projectCards";
+/* import { useState } from "react";
+ */
 
-const Home = ({ toggleTheme }) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+const Home = (/* { toggleTheme, toggleDrawer } */) => {
+
+/*   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-  };
+  }; */
+  
+
+  const renderProjectCard = () => {
+    return projectCard.map((elements, index) => (
+      <Grid item xs={12} sm={6} key={index}>
+      <Card sx={{maxHeight: 180, }}>
+        <CardContent>
+          <Typography variant="h6">{elements.name}</Typography>
+          <p>
+            {elements.description}
+          </p>
+          <Chip label={elements.chips} variant="uotlined" />
+        </CardContent>
+      </Card>
+    </Grid>
+    ))
+  }
 
   return (
     <>
-      <Grid
+     {/*  <Grid
         container
         direction="row"
         justifyContent="center"
@@ -34,8 +54,8 @@ const Home = ({ toggleTheme }) => {
         alignContent="center"
         wrap="wrap"
       >
-        <NavBar toggleDrawer={toggleDrawer} toggleTheme={toggleTheme} />
-      </Grid>
+        <NavBar toggleDrawer={toggleDrawer} toggleTheme={toggleTheme} />,
+      </Grid> */}
 
       <Container maxWidth="lg" sx={{ marginTop: 12 }}>
         <Grid
@@ -46,6 +66,7 @@ const Home = ({ toggleTheme }) => {
           textAlign="center"
           spacing={3}
         >
+
           <Grid item xs={12} sm={6} sx={{ textAlign: "center" }}>
             <Box
               sx={{
@@ -64,62 +85,16 @@ const Home = ({ toggleTheme }) => {
                 DAg2no
               </Typography>
             </Box>
+
+
             <Grid container spacing={2} sx={{ marginTop: 2 }}>
-              <Grid item xs={12} sm={6}>
-                <Card>
-                  <CardContent>
-                    <Typography variant="h6">Example</Typography>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum, nesciunt.
-                    </p>
-                    {/*  next tags example */}
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Card>
-                  <CardContent>
-                    <Typography variant="h6">Example</Typography>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum, nesciunt.
-                    </p>
-                    {/*  next tags example */}
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Card>
-                  <CardContent>
-                    <Typography variant="h6">Example</Typography>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum, nesciunt.
-                    </p>
-                    {/*  next tags example */}
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Card>
-                  <CardContent>
-                    <Typography variant="h6">Example</Typography>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatum, nesciunt.
-                    </p>
-                    {/*  next tags example */}
-                  </CardContent>
-                </Card>
-              </Grid>
+              {renderProjectCard()}
             </Grid>
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography variant="h4" component='div'> My skill! </Typography>
+          <Typography variant="h4" component='div'>Stack</Typography>
             <Box mt={3}>
-              <Typography variant="h5">Stack</Typography>
               <Grid
                 container
                 spacing={2}
@@ -199,7 +174,7 @@ const Home = ({ toggleTheme }) => {
         </Grid>
       </Container>
 
-      <CustomDrawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
+{/*       <CustomDrawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} /> */}
     </>
   );
 };
