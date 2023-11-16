@@ -5,13 +5,13 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { darkTheme, lightTheme } from './theme/themeSettings';
 import Home from './pages/home/home';
 import { Contact, Description } from './pages'
-import Navbar from './components/navbar/navbar';
-import CustomDrawer from './components/navbar/CustomDrawer';
+import NavBar from './components/Navbar/Navbar';
+import CustomDrawer from './components/Navbar/CustomDrawer';
 
 const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
   return (
     <>
-      <Navbar toggleDrawer={toggleDrawer} toggleTheme={toggleTheme} />
+      <NavBar toggleDrawer={toggleDrawer} toggleTheme={toggleTheme} />
       <CustomDrawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
       {children}
     </>
@@ -36,9 +36,9 @@ const PortafolioApp = () => {
         <CssBaseline />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Layout toggleDrawer={toggleDrawer} toggleTheme={toggleTheme}><Home toggleTheme={toggleTheme} /></Layout>} />
-            <Route path="/description" element={<Layout toggleDrawer={toggleDrawer} toggleTheme={toggleTheme}><Description /></Layout>} />
-            <Route path="/contact" element={<Layout toggleDrawer={toggleDrawer} toggleTheme={toggleTheme}><Contact /></Layout>} />
+            <Route path="/" element={<Layout toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} toggleTheme={toggleTheme}><Home toggleTheme={toggleTheme} /></Layout>} />
+            <Route path="/description" element={<Layout toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} toggleTheme={toggleTheme}><Description /></Layout>} />
+            <Route path="/contact" element={<Layout toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} toggleTheme={toggleTheme}><Contact /></Layout>} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
