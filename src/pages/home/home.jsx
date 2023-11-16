@@ -10,28 +10,17 @@ import {
 } from "@mui/material";
 
 import "./styles.css";
-import CustomDrawer from "../../components/Navbar/CustomDrawer";
-import NavBar from "../../components/Navbar/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBootstrap, faCss3Alt, faHtml5, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
 import { blue, indigo, lime, purple } from "@mui/material/colors";
 import { projectCard } from "../../helpers/projectCards";
-/* import { useState } from "react";
- */
 
-const Home = (/* { toggleTheme, toggleDrawer } */) => {
-
-/*   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  }; */
-  
+const Home = () => {
 
   const renderProjectCard = () => {
     return projectCard.map((elements, index) => (
       <Grid item xs={12} sm={6} key={index}>
-      <Card sx={{maxHeight: 180, }}>
+      <Card sx={{ maxHeight: 180, }}>
         <CardContent>
           <Typography variant="h6">{elements.name}</Typography>
           <p>
@@ -46,17 +35,6 @@ const Home = (/* { toggleTheme, toggleDrawer } */) => {
 
   return (
     <>
-     {/*  <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        alignContent="center"
-        wrap="wrap"
-      >
-        <NavBar toggleDrawer={toggleDrawer} toggleTheme={toggleTheme} />,
-      </Grid> */}
-
       <Container maxWidth="lg" sx={{ marginTop: 12 }}>
         <Grid
           container
@@ -173,8 +151,6 @@ const Home = (/* { toggleTheme, toggleDrawer } */) => {
           </Grid>
         </Grid>
       </Container>
-
-{/*       <CustomDrawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} /> */}
     </>
   );
 };

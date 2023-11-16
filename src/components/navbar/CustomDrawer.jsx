@@ -10,7 +10,7 @@ const CustomDrawer = ({ isDrawerOpen, toggleDrawer }) => {
       <List>
         {navLinks.map((link, index) => (
           <ListItem key={index}>
-              <Link to={link.link} className="">
+              <Link to={link.link} style={{textDecoration: 'none', color: 'inherit',}}>
           <Typography variant="h6" color="inherit" fontSize="1.1rem">
             {link.text}
           </Typography>
