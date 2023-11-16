@@ -1,8 +1,5 @@
-````jsx
-console.log('Quest')
-````
+# Portafolio Page
 
-
-
-- finish placing the skills
-- make the cards work in addition to adding animations
+_ New task _ 
+* create Description and Contact
+* look for problems in the code
