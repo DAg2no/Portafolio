@@ -2,6 +2,7 @@ import {
   Avatar,
   Box,
   Card,
+  CardActionArea,
   CardContent,
   Chip,
   Container,
@@ -13,14 +14,17 @@ import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBootstrap, faCss3Alt, faHtml5, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
 import { blue, indigo, lime, purple } from "@mui/material/colors";
-import { projectCard } from "../../helpers/projectCards";
+import { projectCardRecent } from "../../helpers/projectCardsRecent";
 
 const Home = () => {
 
-  const renderProjectCard = () => {
-    return projectCard.map((elements, index) => (
+  // ** render project cards
+
+  const renderProjectCardRecent = () => {
+    return projectCardRecent.map((elements, index) => (
       <Grid item xs={12} sm={6} key={index}>
       <Card sx={{ maxHeight: 180, }}>
+          <CardActionArea href={elements.link}>
         <CardContent>
           <Typography variant="h6">{elements.name}</Typography>
           <p>
@@ -28,6 +32,7 @@ const Home = () => {
           </p>
           <Chip label={elements.chips} variant="uotlined" />
         </CardContent>
+          </CardActionArea>
       </Card>
     </Grid>
     ))
@@ -66,7 +71,8 @@ const Home = () => {
 
 
             <Grid container spacing={2} sx={{ marginTop: 2 }}>
-              {renderProjectCard()}
+              
+              {renderProjectCardRecent()}
             </Grid>
           </Grid>
 

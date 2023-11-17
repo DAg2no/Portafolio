@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
 import { darkTheme, lightTheme } from "./theme/themeSettings";
-import Home from "./pages/home/home";
+import Home from "./pages/home/Home";
 import { Contact, Description } from "./pages";
 import NavBar from "./components/Navbar/Navbar";
 import CustomDrawer from "./components/Navbar/CustomDrawer";
+import { Project } from "./pages/Project";
 
 const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
   return (
@@ -36,6 +37,7 @@ const PortafolioApp = () => {
         <CssBaseline />
         <BrowserRouter>
           <Routes>
+            {/* Home router */}
             <Route
               path="/"
               element={
@@ -48,6 +50,20 @@ const PortafolioApp = () => {
                 </Layout>
               }
             />
+            {/* Project router */}
+            <Route
+              path="/project"
+              element={
+                <Layout
+                  toggleDrawer={toggleDrawer}
+                  isDrawerOpen={isDrawerOpen}
+                  toggleTheme={toggleTheme}
+                >
+                  <Project/>
+                </Layout>
+              }
+            />
+            {/* Description router */}
             <Route
               path="/description"
               element={
@@ -60,6 +76,7 @@ const PortafolioApp = () => {
                 </Layout>
               }
             />
+            {/* Contact  router */}
             <Route
               path="/contact"
               element={
