@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
   
   
-  const NavBar = ({ toggleDrawer, toggleTheme }) => {
+ export const NavBar = ({ toggleDrawer, toggleTheme }) => {
 
     const renderNavButtons = () => {
       return navLinks.map((link, index) => (
@@ -53,4 +53,3 @@ import { Link } from "react-router-dom";
   };
 
   
-  export default NavBar;

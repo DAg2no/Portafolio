@@ -2,7 +2,7 @@ import { Drawer, List, ListItem, Typography } from "@mui/material";
 import { navLinks } from "../../helpers/navLinks";
 import { Link } from "react-router-dom";
 
-const CustomDrawer = ({ isDrawerOpen, toggleDrawer }) => {
+export const CustomDrawer = ({ isDrawerOpen, toggleDrawer }) => {
 
 
   const renderDrawerList = () => {
@@ -28,4 +28,3 @@ const CustomDrawer = ({ isDrawerOpen, toggleDrawer }) => {
   );
 };
 
-export default CustomDrawer;
