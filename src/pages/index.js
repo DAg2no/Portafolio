@@ -1,2 +1,2 @@
 export * from './Contact'
-export * from './Description'
+export * from './about/About'

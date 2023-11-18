@@ -18,22 +18,23 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/icons-material": "^5.14.16",
-    "@mui/material": "^5.14.17",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.19.0"
+    
   },
   "devDependencies": {
-    "@types/react": "^18.2.36",
-    "@types/react-dom": "^18.2.14",
-    "@vitejs/plugin-react": "^4.1.1",
-    "eslint": "^8.53.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.54.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "standard": "^17.1.0",
-    "vite": "^4.5.0"
+    "vite": "^5.0.0"
   },
   "eslintConfig": {
     "extends": [

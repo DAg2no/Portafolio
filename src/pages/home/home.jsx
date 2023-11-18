@@ -15,15 +15,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBootstrap, faCss3Alt, faHtml5, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
 import { blue, indigo, lime, purple } from "@mui/material/colors";
 import { projectCardRecent } from "../../helpers/projectCardsRecent";
+import { useTheme } from "@emotion/react";
 
 const Home = () => {
 
   // ** render project cards
+  const theme = useTheme()
+  const themeColor = theme.palette.mode === 'light' ? "#7A3ED5" : "#882DB2";
 
   const renderProjectCardRecent = () => {
     return projectCardRecent.map((elements, index) => (
       <Grid item xs={12} sm={6} key={index}>
-      <Card sx={{ maxHeight: 180, }}>
+      <Card sx={{ maxHeight: 180, }}  className="slide-fwd-center">
           <CardActionArea href={elements.link}>
         <CardContent>
           <Typography variant="h6">{elements.name}</Typography>
@@ -61,11 +64,13 @@ const Home = () => {
               <Avatar
                 alt="hola!"
                 src="/icon.png"
-                className="rotate-scale-down"
                 sx={{ width: 150, height: 150 }}
               />
-              <Typography variant="h4" component="span">
+              <Typography variant="h4" component="span" sx={{color: themeColor}}>
+               
+                  
                 DAg2no
+            
               </Typography>
             </Box>
 
