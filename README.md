@@ -2,5 +2,6 @@
 
 _ New task _ 
 * [x] first add projects
-* [] create Description and Contact
+* [x] create Description 
+* [] Create contact
 * [] look for problems in the code

@@ -17,7 +17,7 @@ import { blue, indigo, lime, purple } from "@mui/material/colors";
 import { projectCardRecent } from "../../helpers/projectCardsRecent";
 import { useTheme } from "@emotion/react";
 
-const Home = () => {
+export const Home = () => {
 
   // ** render project cards
   const theme = useTheme()
@@ -166,4 +166,3 @@ const Home = () => {
   );
 };
 
-export default Home;

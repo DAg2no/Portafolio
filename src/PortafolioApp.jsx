@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-
 import { darkTheme, lightTheme } from "./theme/themeSettings";
-import Home from "./pages/home/Home";
-import { Contact, About } from "./pages";
+import { Home ,Contact, About, } from "./pages";
 import NavBar from "./components/Navbar/Navbar";
 import CustomDrawer from "./components/Navbar/CustomDrawer";
 import { Project } from "./pages/Project";
 import { LoandingPage } from "./LoandingPage";
+ import { ErrorPage } from "./pages/ErrorPage";
+
 
 const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
   return (
@@ -60,6 +60,7 @@ const PortafolioApp = () => {
                     <Home toggleTheme={toggleTheme} />
                   </Layout>
                 }
+                errorElement={<ErrorPage/>}
               />
               {/* Project router */}
               <Route
