@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "./theme/themeSettings";
-import { Home ,Contact, About, } from "./pages";
+import { Home, Contact, About, } from "./pages";
 import { CustomDrawer, NavBar } from "./components/navbar";
 import { Project } from "./pages/Project";
 import { LoandingPage } from "./LoandingPage";
