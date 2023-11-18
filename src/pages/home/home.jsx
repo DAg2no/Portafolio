@@ -21,7 +21,7 @@ const Home = () => {
 
   // ** render project cards
   const theme = useTheme()
-  const themeColor = theme.palette.mode === 'light' ? "#7A3ED5" : "#882DB2";
+  const themeColor = theme.palette.mode === 'light' ? "#668CB4" : "#3899FF";
 
   const renderProjectCardRecent = () => {
     return projectCardRecent.map((elements, index) => (
@@ -74,8 +74,8 @@ const Home = () => {
               </Typography>
             </Box>
 
-
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
+                  <Typography variant="h4" component='div' >project recent</Typography>
+            <Grid container spacing={2} sx={{ marginTop: 1 }}>
               
               {renderProjectCardRecent()}
             </Grid>
