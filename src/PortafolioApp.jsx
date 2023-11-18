@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "./theme/themeSettings";
 import { Home ,Contact, About, } from "./pages";
-import NavBar from "./components/Navbar/Navbar";
+import NavBar from "./components/navbar/Navbar";
 import CustomDrawer from "./components/Navbar/CustomDrawer";
 import { Project } from "./pages/Project";
 import { LoandingPage } from "./LoandingPage";
