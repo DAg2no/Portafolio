@@ -49,7 +49,7 @@ const PortafolioApp = () => {
             <Routes>
               {/* Home router */}
               <Route
-                path="/home"
+                path="/"
                 element={
                   <Layout
                     toggleDrawer={toggleDrawer}
