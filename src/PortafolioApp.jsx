@@ -63,7 +63,7 @@ const PortafolioApp = () => {
               />
               {/* Project router */}
               <Route
-                path="/#/project"
+                path="/project"
                 element={
                   <Layout
                     toggleDrawer={toggleDrawer}
@@ -76,7 +76,7 @@ const PortafolioApp = () => {
               />
               {/* Description router */}
               <Route
-                path="/#/about"
+                path="/about"
                 element={
                   <Layout
                     toggleDrawer={toggleDrawer}
@@ -89,7 +89,7 @@ const PortafolioApp = () => {
               />
               {/* Contact  router */}
               <Route
-                path="/#/contact"
+                path="/contact"
                 element={
                   <Layout
                     toggleDrawer={toggleDrawer}
