@@ -22,7 +22,7 @@ export const About = () => {
         marginTop={25}
         spacing={1}
       >
-        <Grid sx={12} md={6}>
+        <Grid sx={12} md={6} className="text-focus-in">
         <Container maxWidth="xl">
           <Typography variant="h3" component="div">
             I'm <strong style={{ color: themeColor }}>Daniel Uribe</strong>
@@ -54,13 +54,13 @@ export const About = () => {
             </strong>, <strong style={{ color: themeColor }}>html</strong> y{" "}
             <strong style={{ color: themeColor }}>javascript</strong> sin
             problemas, pero de dominarlo dificil siempre se puede aprender algo
-            nuevo cada dia.
+            nuevo cada dia ❤️.
           </Typography>
         </Container>
         </Grid>
       <Hidden mdDown>
 
-        <Grid md={6}>
+        <Grid md={6} className="text-focus-in">
           <Box justifyContent="center" display="flex">
               <Avatar src={ImgMini} alt="imgMini" sx={{bgcolor: blue[50], width: 450, height: 450}}/>
           </Box>
