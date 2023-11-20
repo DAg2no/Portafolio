@@ -100,6 +100,10 @@ const PortafolioApp = () => {
                   </Layout>
                 }
               />
+              <Route
+                path="*"
+                element={<ErrorPage/>}
+              />
             </Routes>
           )}
         </BrowserRouter>
