@@ -91,65 +91,7 @@ export const Home = () => {
                 justifyContent="center"
                 direction="row"
               >
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar
-                    className="scale-up-center"
-                    sx={{ width: 55, height: 55, bgcolor: blue[50], border: '3px solid black', borderRadius: 2, }}
-
-                  >
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      style={{ color: "#bd5528", width: 50, height: 50, }}
-                    />
-                  </Avatar>
-                </Grid>
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar
-                    className="scale-up-center"
-                    sx={{ width: 55, height: 55, borderRadius: 2, bgcolor: indigo[50], border: '3px solid black', }}
-                  >
-                    <FontAwesomeIcon icon={faCss3Alt} style={{color: "#0346ba", width: 50, height: 50,}} />
-                  </Avatar>
-                </Grid>
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar          
-                    className="scale-up-center"
-                    sx={{ width: 55, height: 55, borderRadius: 2, bgcolor: lime[50], border: '3px solid black', }}
-                  >
-                    <FontAwesomeIcon icon={faSquareJs} style={{color: "#ebcb00", width: 50, height: 50,}} />
-                  </Avatar>
-                </Grid>
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar
-                    className="scale-up-center"
-                    sx={{ width: 55, height: 55, borderRadius: 2, bgcolor: purple[50], border: '3px solid black', }}
-                  >
-                    <FontAwesomeIcon icon={faSass} style={{color: "#9e428d", width: 45, height: 50,}} />
-                  </Avatar>
-                </Grid>
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar
-                    className="scale-up-center"
-                    sx={{ width: 55, height: 55, bgcolor: blue[50], border: '3px solid black', borderRadius: 2, }}
-                    >
-                        <FontAwesomeIcon icon={faReact} style={{color: "#0555e1", width: 45, height: 45,}} />
-                  </Avatar>
-                </Grid>
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar
-                    className="scale-up-center"
-                    sx={{ width: 55, height: 55, bgcolor: purple[50], border: '3px solid black', borderRadius: 2,  }}
-                    >
-                    <FontAwesomeIcon icon={faBootstrap} style={{color: "#562763", width: 45, height: 45,}} />
-                  </Avatar>
-                </Grid>
-                <Grid item sx={6} sm={2} md={2}>
-                  <Avatar
-                    className="scale-up-center"
-                    sx={{ width: 50, height: 50, color: '#2748DB', bgcolor: blue[50], borderRadius: 2, border: '3px solid black',}}
-                    src="/muiIcon.svg"
-                    />
-                </Grid>
+                
                
 
 

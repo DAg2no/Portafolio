@@ -1,0 +1,17 @@
+.DarkModeTextColor {
+  color: #8a0ee3;
+  background-image: -webkit-linear-gradient(45deg, #8a0ee3 33%, #472696 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.LightModeTextColor {
+
+  color: #0e91e3;
+  background-image: -webkit-linear-gradient(45deg, #0e91e3 30%, #269667 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}

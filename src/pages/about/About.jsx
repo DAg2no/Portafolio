@@ -1,9 +1,34 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Grid, Typography, useTheme, Container, Box, Avatar, Hidden } from "@mui/material";
+import { Typography, useTheme, Container, Box, Avatar, Hidden, Card, CardContent} from "@mui/material";
 import ImgMini from '../../../public/imgMini.png'
+import Grid from '@mui/material/Unstable_Grid2';
 import './styles.css'
 import { blue } from "@mui/material/colors";
+
+const SkillItem = ({ iconSrc, title,}) => {
+  return (
+    <Grid item xs={12} sm={6} md={4} >
+      <Card sx={{height: 200}}>
+        
+          <CardContent
+            sx={{
+              display: "flex",
+              alignItems: "center",
+             justifyContent: 'center',
+             
+            }}
+          >
+            <Avatar variant='rounded' sx={{ width: 100, height: 100, margin: 'auto', color: '#777A97' }} >
+              <img src={iconSrc} style={{width: 50, height: 50}} />
+              <Typography variant="h5">{title}</Typography>
+            </Avatar>
+          </CardContent>
+        
+      </Card>
+    </Grid>
+  );
+};
 
 export const About = () => {
   const theme = useTheme();
@@ -22,7 +47,7 @@ export const About = () => {
         marginTop={25}
         spacing={1}
       >
-        <Grid sx={12} md={6} className="text-focus-in">
+        <Grid sx={12} md={6}>
         <Container maxWidth="xl">
           <Typography variant="h3" component="div">
             I'm <strong style={{ color: themeColor }}>Daniel Uribe</strong>
@@ -60,12 +85,35 @@ export const About = () => {
         </Grid>
       <Hidden mdDown>
 
-        <Grid md={6} className="text-focus-in">
+        <Grid md={6}>
           <Box justifyContent="center" display="flex">
               <Avatar src={ImgMini} alt="imgMini" sx={{bgcolor: blue[50], width: 450, height: 450}}/>
           </Box>
         </Grid>
+
+        
       </Hidden>
+      <Grid sx={12} md={12} textAlign='center' pt={50}>
+          <Typography variant="h3"> Skills </Typography>
+              <Grid
+                container
+                spacing={1}
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                alignContent="center"
+                wrap="wrap"
+              >
+                <SkillItem iconSrc={'/js.png'} />
+                <SkillItem iconSrc={'/html.png'} />
+                <SkillItem iconSrc={'/css.png'} />
+                <SkillItem iconSrc={'/react.png'} />
+                <SkillItem iconSrc={'/mui.png'} />
+                <SkillItem iconSrc={'/sass.png'} />
+                <SkillItem iconSrc={'/bootstrap.png'} />
+                <SkillItem iconSrc={'/react-router.png'} />
+              </Grid>
+        </Grid>
       </Grid>
     </>
   );
