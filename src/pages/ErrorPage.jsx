@@ -2,7 +2,6 @@
 import {
   Avatar,
   Box,
-  Container,
    Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";

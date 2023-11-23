@@ -1,25 +1,8 @@
-import { Card, CardActionArea, CardContent, Chip, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { ProjectCard } from "../helpers/projectCards"
-
+import { renderProjectCard } from "../helpers/renderProjectCard";
 export const Project = () => {
-  const renderProjectCard = () => {
-    return ProjectCard.map((prop, index) => (
-<Grid item sx={12} md={2} sm={2} key={index}>
-          <Card sx={{maxWidth: 200, maxHeight: 200}}>
-            <CardActionArea href={prop.link}>
-                <CardContent>
-                  <Typography variant="h5" component='span'>{prop.name}</Typography>
-                  <p>
-                    {prop.description}
-                  </p>
-                  <Chip label={prop.chips} variant="outlined"/>
-                </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-    ))
-  }
+ 
   return (
     <>
       <Grid

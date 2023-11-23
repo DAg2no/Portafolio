@@ -4,17 +4,18 @@ import {
   Card,
   CardActionArea,
   CardContent,
+  Grid,
   Typography,
   useTheme,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+
 import "./styles.css";
 
-const ContactItem = ({ iconSrc, title }) => {
+const ContactItem = ({ iconSrc, title, link }) => {
   return (
     <Grid item xs={12} md={6} sm={6}>
       <Card>
-        <CardActionArea>
+        <CardActionArea href={link}> 
           <CardContent
             sx={{
               display: "flex",
@@ -47,7 +48,7 @@ export const Contact = () => {
         wrap="wrap"
         mt={15}
       >
-        <Grid sx={12}>
+        <Grid item sx={12}>
           <Box
             flexDirection="column"
             alignItems="center"
@@ -71,7 +72,7 @@ export const Contact = () => {
         textAlign="center"
         wrap="wrap"
       >
-        <ContactItem iconSrc="/github.png" title="Github" />
+        <ContactItem iconSrc="/github.png" title="Github" link='https://github.com/DAg2no'/>
         <ContactItem iconSrc="/gmail.png" title="Gmail" />
         <ContactItem iconSrc="/stackoverflow.png" title="StackOverflow" />
         <ContactItem iconSrc="/whatsapp.png" title="Whatsapp" />

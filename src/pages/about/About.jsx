@@ -9,9 +9,10 @@ import {
   Hidden,
   Card,
   CardContent,
+  Grid,
 } from "@mui/material";
 import ImgMini from "../../../public/imgMini.png";
-import Grid from "@mui/material/Unstable_Grid2";
+
 import "./styles.css";
 import { blue } from "@mui/material/colors";
 
@@ -56,7 +57,7 @@ export const About = () => {
         marginTop={25}
         spacing={1}
       >
-        <Grid sx={12} md={6}>
+        <Grid item sx={12} md={6}>
           <Container maxWidth="xl">
             <Typography variant="h3" component="div">
               I'm <strong style={{ color: themeColor }}>Daniel Uribe</strong>
@@ -103,7 +104,7 @@ export const About = () => {
             </Box>
           </Grid>
         </Hidden>
-        <Grid sx md sm textAlign="center" pt={50}>
+        <Grid item textAlign="center" pt={50}>
           <Grid
             container
             spacing={1}
