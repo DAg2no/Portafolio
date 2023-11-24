@@ -7,7 +7,10 @@ import { renderWork } from "../../helpers/renderWork";
 export const Home = () => {
   // ** render project cards
   const theme = useTheme();
-  const themeColor = theme.palette.mode === "light" ? "colorThemeTextLight" : "colorThemeTextDark";
+  const themeColor =
+    theme.palette.mode === "light"
+      ? "colorThemeTextLight"
+      : "colorThemeTextDark";
 
   return (
     <>
@@ -33,15 +36,8 @@ export const Home = () => {
                 src="/icon.png"
                 sx={{ width: 150, height: 150 }}
               />
-              <Typography
-                variant="h4"
-                component="span"
-                className={themeColor}
-              >
-                <strong>
-
-                DAg2no
-                </strong>
+              <Typography variant="h4" component="span" className={themeColor}>
+                <strong>DAg2no</strong>
               </Typography>
             </Box>
 
@@ -63,7 +59,7 @@ export const Home = () => {
               container
               spacing={1}
               direction="row"
-              mt={5}
+              
               justifyContent="center"
               alignItems="center"
               alignContent="center"
