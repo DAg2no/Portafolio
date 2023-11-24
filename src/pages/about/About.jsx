@@ -7,38 +7,14 @@ import {
   Box,
   Avatar,
   Hidden,
-  Card,
-  CardContent,
   Grid,
 } from "@mui/material";
 import ImgMini from "../../../public/imgMini.png";
 
 import "./styles.css";
 import { blue } from "@mui/material/colors";
+import { renderSkillItem } from "../../helpers/renderSkillItem";
 
-const SkillItem = ({ iconSrc, title }) => {
-  return (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card sx={{ justifyContent: "center", alignItems: "center" }}>
-        <CardContent
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Avatar
-            variant="rounded"
-            sx={{ width: 100, height: 100, margin: "auto", color: "#777A97" }}
-          >
-            <img src={iconSrc} style={{ width: 50, height: 50 }} />
-            <Typography variant="h5">{title}</Typography>
-          </Avatar>
-        </CardContent>
-      </Card>
-    </Grid>
-  );
-};
 
 export const About = () => {
   const theme = useTheme();
@@ -104,10 +80,11 @@ export const About = () => {
             </Box>
           </Grid>
         </Hidden>
-        <Grid item textAlign="center" pt={50}>
+     
           <Grid
             container
             spacing={1}
+            pt={50}
             display='flex'
             direction='column'
             justifyContent="center"
@@ -129,16 +106,9 @@ export const About = () => {
             wrap="wrap"
             pt={10}
           >
-            <SkillItem iconSrc={"/js.png"} />
-            <SkillItem iconSrc={"/html.png"} />
-            <SkillItem iconSrc={"/css.png"} />
-            <SkillItem iconSrc={"/react.png"} />
-            <SkillItem iconSrc={"/mui.png"} />
-            <SkillItem iconSrc={"/sass.png"} />
-            <SkillItem iconSrc={"/bootstrap.png"} />
-            <SkillItem iconSrc={"/react-router.png"} />
+          {renderSkillItem()}
           </Grid>
-        </Grid>
+        
       </Grid>
     </>
   );

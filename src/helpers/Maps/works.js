@@ -1,6 +1,6 @@
 export const Works = [
-    {name: '', link: '', description: 'undefined'},
-    {name: '', link: '', description: 'undefined'},
-    {name: '', link: '', description: 'undefined'},
-    {name: '', link: '', description: 'undefined'},
+    {name: 'none', link: '', description: 'undefined', nameIMG: '', srcIMG: '/example.jpg'},
+    {name: 'none', link: '', description: 'undefined', nameIMG: '', srcIMG: '/example.jpg'},
+    {name: 'none', link: '', description: 'undefined', nameIMG: '', srcIMG: '/example.jpg'},
+    {name: 'none', link: '', description: 'undefined', nameIMG: '', srcIMG: '/example.jpg'},
 ]

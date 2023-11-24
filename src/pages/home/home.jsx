@@ -1,17 +1,8 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  Chip,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 import "./styles.css";
 import { renderProjectCardRecent } from "../../helpers/renderProjectCardRecent";
 import { useTheme } from "@emotion/react";
+import { renderWork } from "../../helpers/renderWork";
 
 export const Home = () => {
   // ** render project cards
@@ -60,18 +51,23 @@ export const Home = () => {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography variant="h4" component="div">
-              Works
-            </Typography>
-            <Box mt={3}>
-              <Grid
-                container
-                spacing={2}
-                display="flex"
-                justifyContent="center"
-                direction="row"
-              ></Grid>
+            <Box>
+              <Typography variant="h4" component="div" className="roboto">
+                My jobs
+              </Typography>
             </Box>
+            <Grid
+              container
+              spacing={1}
+              direction="row"
+              mt={5}
+              justifyContent="center"
+              alignItems="center"
+              alignContent="center"
+              wrap="wrap"
+            >
+              {renderWork()}
+            </Grid>
           </Grid>
         </Grid>
       </Container>
