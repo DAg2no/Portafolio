@@ -7,7 +7,7 @@ import { renderWork } from "../../helpers/renderWork";
 export const Home = () => {
   // ** render project cards
   const theme = useTheme();
-  const themeColor = theme.palette.mode === "light" ? "#668CB4" : "#3899FF";
+  const themeColor = theme.palette.mode === "light" ? "colorThemeTextLight" : "colorThemeTextDark";
 
   return (
     <>
@@ -36,9 +36,12 @@ export const Home = () => {
               <Typography
                 variant="h4"
                 component="span"
-                sx={{ color: themeColor }}
+                className={themeColor}
               >
+                <strong>
+
                 DAg2no
+                </strong>
               </Typography>
             </Box>
 

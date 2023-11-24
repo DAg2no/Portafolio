@@ -1,0 +1,18 @@
+.colorThemeTextDark {
+  color: #a639bd;
+  background-image: -webkit-linear-gradient(0deg, #a639bd 0%, #def117 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.colorThemeTextLight {
+  /** TEXT GRADIENT */
+  color: #750be5;
+  background-image: -webkit-linear-gradient(0deg, #750be5 0%, #ce9481 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
