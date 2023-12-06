@@ -1,5 +1,6 @@
 import {
     AppBar,
+    Box,
     Hidden,
     IconButton,
     Stack,
@@ -38,6 +39,7 @@ import { renderNavButtons } from "../../helpers/renderNavButtons";
             </Stack>
           </Hidden>
         </Toolbar>
+              
       </AppBar>
     );
   };
