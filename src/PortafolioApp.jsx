@@ -74,6 +74,7 @@ const PortafolioApp = () => {
                     <Project/>
                   </Layout>
                 }
+                errorElement={<ErrorPage/>}
               />
               {/* Description router */}
               <Route
@@ -87,6 +88,7 @@ const PortafolioApp = () => {
                     <About />
                   </Layout>
                 }
+                errorElement={<ErrorPage/>}
               />
               {/* Contact  router */}
               <Route
@@ -100,6 +102,8 @@ const PortafolioApp = () => {
                     <Contact />
                   </Layout>
                 }
+                errorElement={<ErrorPage/>}
+            
               />
               <Route
                 path="*"

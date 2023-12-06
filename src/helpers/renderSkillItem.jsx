@@ -19,6 +19,7 @@ export const renderSkillItem = () => {
             <img src={item.iconSrc} style={{ width: 50, height: 50 }} />
             <Typography variant="h5">{item.title}</Typography>
           </Avatar>
+          
         </CardContent>
       </Card>
     </Grid>
