@@ -1,3 +1,3 @@
 export * from './contact/Contact'
-export * from './home/Home'
+export * from './Home/home'
 export * from './skill/Skill'
