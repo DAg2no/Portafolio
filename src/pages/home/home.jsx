@@ -13,7 +13,7 @@ import ImgMini from "../../../public/imgMini.png";
 
 import "./styles.css";
 import { blue } from "@mui/material/colors";
-import { renderSkillItem } from "../../helpers/renderSkillItem";
+
 
 
 export const Home = () => {
@@ -75,8 +75,6 @@ export const Home = () => {
             </Box>
           </Grid>
         </Hidden>
-     
-          
       </Grid>
     </>
   );
