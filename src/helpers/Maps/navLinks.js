@@ -3,8 +3,7 @@
 
 export const navLinks = [
     { text: "Home", link: "/" },
-    { text: "Project", link: "/project"},
-    { text: "About", link: '/about'},
+    { text: "Skills", link: "/skills"},
     { text: "Contact", link: "/Contact"},
   ];
 

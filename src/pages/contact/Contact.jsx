@@ -13,18 +13,24 @@ import "./styles.css";
 
 const ContactItem = ({ iconSrc, title, link }) => {
   return (
-    <Grid item xs={12} md={6} sm={6}>
+    <Grid item xs={12} sm={6} md={4}>
       <Card>
-        <CardActionArea href={link}> 
+        <CardActionArea href={link} sx={{ textDecoration: "none" }}>
           <CardContent
             sx={{
               display: "flex",
-              alignItems: "center",
               flexDirection: "column",
+              alignItems: "center",
+              padding: 3,
             }}
           >
-            <Avatar src={iconSrc} variant="rounded" sx={{ width: 150, height: 150 }} />
-            <Typography variant="h3">{title}</Typography>
+            <Avatar
+              src={iconSrc}
+              alt={title}
+              variant="rounded"
+              sx={{ width: 100, height: 100, marginBottom: 2 }}
+            />
+            <Typography variant="h5">{title}</Typography>
           </CardContent>
         </CardActionArea>
       </Card>
@@ -43,19 +49,21 @@ export const Contact = () => {
         container
         justifyContent="center"
         alignItems="center"
-        alignContent="center"
         textAlign="center"
-        wrap="wrap"
         mt={15}
       >
-        <Grid item sx={12}>
+        <Grid item xs={12}>
           <Box
+            display="flex"
             flexDirection="column"
             alignItems="center"
-            display="flex"
-            sx={{ width: 200, height: 200 }}
+            mb={3}
           >
-            <Avatar src="/foto.png" sx={{ width: 150, height: 150 }} />
+            <Avatar
+              src="/foto.png"
+              alt="Daniel Uribe"
+              sx={{ width: 150, height: 150, marginBottom: 2 }}
+            />
             <Typography variant="h4" className={colorTextTheme}>
               <strong>Daniel Uribe</strong>
             </Typography>
@@ -65,12 +73,11 @@ export const Contact = () => {
 
       <Grid
         container
-        spacing={1}
+        spacing={3}
         justifyContent="center"
         alignItems="center"
-        alignContent="center"
         textAlign="center"
-        wrap="wrap"
+        mt={3}
       >
         <ContactItem iconSrc="/github.png" title="Github" link='https://github.com/DAg2no'/>
         <ContactItem iconSrc="/gmail.png" title="Gmail" />
