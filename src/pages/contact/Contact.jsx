@@ -21,7 +21,7 @@ const ContactItem = ({ iconSrc, title, link }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              padding: 3,
+              p: 3,
             }}
           >
             <Avatar
@@ -57,12 +57,12 @@ export const Contact = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            mb={3}
+            pb={3}
           >
             <Avatar
               src="/foto.png"
               alt="Daniel Uribe"
-              sx={{ width: 150, height: 150, marginBottom: 2 }}
+              sx={{ width: 150, height: 150, mb: 2 }}
             />
             <Typography variant="h4" className={colorTextTheme}>
               <strong>Daniel Uribe</strong>
@@ -77,7 +77,7 @@ export const Contact = () => {
         justifyContent="center"
         alignItems="center"
         textAlign="center"
-        mt={3}
+        pt={3}
       >
         <ContactItem iconSrc="/github.png" title="Github" link='https://github.com/DAg2no'/>
         <ContactItem iconSrc="/gmail.png" title="Gmail" />
