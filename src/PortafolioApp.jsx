@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "./theme/themeSettings";
-import { Home, Contact, Skill } from "./pages";
+import { Home, Contact } from "./pages";
 import { CustomDrawer, NavBar } from "./components/navbar";
 import { LoandingPage } from "./LoandingPage";
- import { ErrorPage } from "./pages/ErrorPage";
-
-
+import { ErrorPage } from "./pages/ErrorPage";
+import { Projects } from "./pages/Projects";
 
 const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
   return (
@@ -20,13 +19,12 @@ const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
 };
 
 const PortafolioApp = () => {
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
- 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false); 
-    }, 900); 
+      setIsLoading(false);
+    }, 900);
   }, []);
 
   const [currentTheme, setCurrentTheme] = useState(darkTheme);
@@ -45,7 +43,9 @@ const PortafolioApp = () => {
       <ThemeProvider theme={currentTheme}>
         <CssBaseline />
         <BrowserRouter>
-          {isLoading ? <LoandingPage /> : ( 
+          {isLoading ? (
+            <LoandingPage />
+          ) : (
             <Routes>
               {/* Home router */}
               <Route
@@ -59,9 +59,9 @@ const PortafolioApp = () => {
                     <Home toggleTheme={toggleTheme} />
                   </Layout>
                 }
-                errorElement={<ErrorPage/>}
+                errorElement={<ErrorPage />}
               />
-              
+
               {/* Contact  router */}
               <Route
                 path="/contact"
@@ -74,25 +74,21 @@ const PortafolioApp = () => {
                     <Contact />
                   </Layout>
                 }
-                errorElement={<ErrorPage/>}
-            
+                errorElement={<ErrorPage />}
               />
-                <Route
-                path="/skills"
+              <Route
+                path="/project"
                 element={
-                  <Layout 
-                  toggleDrawer={toggleDrawer}
-                  isDrawerOpen={isDrawerOpen}
-                  toggleTheme={toggleTheme}
+                  <Layout
+                    toggleDrawer={toggleDrawer}
+                    isDrawerOpen={isDrawerOpen}
+                    toggleTheme={toggleTheme}
                   >
-                      <Skill />
+                    <Projects/>
                   </Layout>
                 }
-                />
-              <Route
-                path="*"
-                element={<ErrorPage/>}
               />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           )}
         </BrowserRouter>

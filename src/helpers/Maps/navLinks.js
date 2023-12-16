@@ -2,9 +2,9 @@
 
 
 export const navLinks = [
-    { text: "Home", link: "/" },
-    { text: "Skills", link: "/skills"},
-    { text: "Contact", link: "/Contact"},
+    { text: "Casa", link: "/" },
+    {text: "projectos", link: "/project"},
+    { text: "Contactos", link: "/Contact"},
   ];
 
 

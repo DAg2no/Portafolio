@@ -5,8 +5,7 @@ import {
   CardActionArea,
   CardContent,
   Grid,
-  Typography,
-  useTheme,
+  Typography, Container,
 } from "@mui/material";
 
 import "./styles.css";
@@ -37,14 +36,11 @@ const ContactItem = ({ iconSrc, title, link }) => {
     </Grid>
   );
 };
-
 export const Contact = () => {
-  const theme = useTheme();
-  const colorTextTheme =
-    theme.palette.mode === "light" ? "LightModeTextColor" : "DarkModeTextColor";
-
   return (
     <>
+    <Container maxWidth="xl">
+      
       <Grid
         container
         justifyContent="center"
@@ -64,7 +60,7 @@ export const Contact = () => {
               alt="Daniel Uribe"
               sx={{ width: 150, height: 150, mb: 2 }}
             />
-            <Typography variant="h4" className={colorTextTheme}>
+            <Typography variant="h4" className="DarkModeTextColor">
               <strong>Daniel Uribe</strong>
             </Typography>
           </Box>
@@ -84,6 +80,7 @@ export const Contact = () => {
         <ContactItem iconSrc="/stackoverflow.png" title="StackOverflow" />
         <ContactItem iconSrc="/whatsapp.png" title="Whatsapp" />
       </Grid>
+    </Container>
     </>
   );
 };

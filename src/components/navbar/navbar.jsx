@@ -11,7 +11,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeSwitch from "../../theme/themeButton";
 import { renderNavButtons } from "../../helpers/renderNavButtons";
-import { Search } from "@mui/icons-material";
+import { Search, GitHub } from "@mui/icons-material";
+
 
 export const NavBar = ({ toggleDrawer, toggleTheme }) => {
   return (
@@ -27,7 +28,7 @@ export const NavBar = ({ toggleDrawer, toggleTheme }) => {
           }}
         >
           <InputBase
-            placeholder="Search..."
+            placeholder="Buscar..."
             fullWidth
             startAdornment={<Search />}
             inputProps={{ "aria-label": "search" }}
@@ -41,8 +42,11 @@ export const NavBar = ({ toggleDrawer, toggleTheme }) => {
           </Stack>
         </Hidden>
 
-        <Stack sx={{ marginLeft: 2 }}>
+        <Stack sx={{ marginLeft: 2, }} flexDirection="row">
           <ThemeSwitch toggleTheme={toggleTheme} />
+          <IconButton href="https://github.com/DAg2no">
+            <GitHub/>
+          </IconButton>
         </Stack>
 
         <Hidden mdUp>

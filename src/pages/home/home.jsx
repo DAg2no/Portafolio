@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import {
   Typography,
   useTheme,
@@ -14,14 +12,13 @@ import ImgMini from "../../../public/imgMini.png";
 import "./styles.css";
 import { blue } from "@mui/material/colors";
 
-
-
 export const Home = () => {
   const theme = useTheme();
   const themeColor = theme.palette.mode === "light" ? "#F311AB" : "#319FC4";
 
   return (
     <>
+    <Container maxWidth='xl'>
       <Grid
         container
         direction="row"
@@ -36,7 +33,7 @@ export const Home = () => {
         <Grid item sx={12} md={6}>
           <Container maxWidth="xl">
             <Typography variant="h3" component="div">
-              I'm <strong style={{ color: themeColor }}>Daniel Uribe</strong>
+             Soy <strong style={{ color: themeColor }}>Daniel Uribe</strong>
             </Typography>
 
             <br />
@@ -44,7 +41,11 @@ export const Home = () => {
             <Typography variant="h5" component="p">
               Soy un{" "}
               <strong style={{ color: themeColor }}>desarrollador web</strong>{" "}
-              con una pasión por el aprendizaje y la creación. Me considero una persona introvertida, pero siempre estoy dispuesto a ayudar a los demás, especialmente en el ámbito laboral. Soy consciente de que no soy perfecto y que puedo cometer errores, pero creo que eso es lo que nos hace humanos. De los errores se aprende y se crece.{" "}
+              con una pasión por el aprendizaje y la creación. Me considero una
+              persona introvertida, pero siempre estoy dispuesto a ayudar a los
+              demás, especialmente en el ámbito laboral. Soy consciente de que
+              no soy perfecto y que puedo cometer errores, pero creo que eso es
+              lo que nos hace humanos. De los errores se aprende y se crece.{" "}
             </Typography>
             <br />
             <Typography variant="h5" component="p">
@@ -76,6 +77,7 @@ export const Home = () => {
           </Grid>
         </Hidden>
       </Grid>
+    </Container>
     </>
   );
 };
