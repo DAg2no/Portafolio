@@ -6,39 +6,84 @@ import {
   Avatar,
   Hidden,
   Grid,
+  Stack,
+  IconButton,
 } from "@mui/material";
-import ImgMini from "../../../public/imgMini.png";
 
 import "./styles.css";
 import { blue } from "@mui/material/colors";
+import { Email, GitHub, WhatsApp } from "@mui/icons-material";
 
 export const Home = () => {
   const theme = useTheme();
   const themeColor = theme.palette.mode === "light" ? "#F311AB" : "#319FC4";
-
   return (
     <>
-    <Container maxWidth='xl'>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        alignContent="center"
-        wrap="wrap"
-        className="slide-top"
-        marginTop={25}
-        spacing={1}
-      >
-        <Grid item sx={12} md={6}>
-          <Container maxWidth="xl">
-            <Typography variant="h3" component="div">
-             Soy <strong style={{ color: themeColor }}>Daniel Uribe</strong>
+      <Container maxWidth="xl">
+        <Grid
+          container
+          spacing={1}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
+          textAlign="center"
+          mt={30}
+          pb={30}
+        >
+          <Grid item xs={12}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontFamily: "orbitron",
+                fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem", lg: "4rem" },
+              }}
+            >
+              Daniel Ignacio Uribe Pulgar
             </Typography>
-
-            <br />
-
-            <Typography variant="h5" component="p">
+            <Typography
+              variant="h4"
+              className="DarkModeTextColor"
+              sx={{
+                fontFamily: "PT Sans",
+                fontSize: { xs: "1rem", md: "1.5rem", lg: "2rem" },
+              }}
+            >
+              Frontend Developer
+            </Typography>
+            <Stack flexDirection="row" justifyContent="center" mt={6}>
+              <IconButton href="https://github.com/DAg2no">
+                <GitHub />
+              </IconButton>
+              <IconButton href="mailto:danielscrip.zsh@gmail.com">
+                <Email />
+              </IconButton>
+              <IconButton href="/https://stackoverflow.com/users/21894223/daniel-uribe">
+                <Avatar
+                  src="/stackoverflow.png"
+                  variant="rounded"
+                  sx={{ width: 30, height: 30 }}
+                />
+              </IconButton>
+              <IconButton href="https://wa.me/+56936577203">
+                <WhatsApp />
+              </IconButton>
+            </Stack>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
+          wrap="wrap"
+          pt={20}
+          pb={20}
+          spacing={1}
+        >
+          <Grid item sx={12} md={6}>
+            <Typography variant="body1" component="p" sx={{ fontSize: 20 }}>
               Soy un{" "}
               <strong style={{ color: themeColor }}>desarrollador web</strong>{" "}
               con una pasión por el aprendizaje y la creación. Me considero una
@@ -48,7 +93,7 @@ export const Home = () => {
               lo que nos hace humanos. De los errores se aprende y se crece.{" "}
             </Typography>
             <br />
-            <Typography variant="h5" component="p">
+            <Typography variant="body1" component="p" sx={{ fontSize: 20 }}>
               {" "}
               Me gusta ser una persona creativa, cuando ago algo me gusta que
               sea perfecto. Aunque paresca que sea una desventaja la verdad creo
@@ -63,21 +108,22 @@ export const Home = () => {
               problemas, pero de dominarlo dificil siempre se puede aprender
               algo nuevo cada dia ❤️.
             </Typography>
-          </Container>
-        </Grid>
-        <Hidden mdDown>
-          <Grid md={6}>
-            <Box justifyContent="center" display="flex">
-              <Avatar
-                src={ImgMini}
-                alt="imgMini"
-                sx={{ bgcolor: blue[50], width: 450, height: 450 }}
-              />
-            </Box>
           </Grid>
-        </Hidden>
-      </Grid>
-    </Container>
+          <Hidden mdDown>
+            <Grid md={6}>
+              <Box justifyContent="center" display="flex">
+                <Avatar
+                  src="/foto.png"
+                  alt="imgMini"
+                  variant="rounded"
+                  className="AvatarContainer"
+                  sx={{ width: 450, height: 450, borderRadius: 10 }}
+                />
+              </Box>
+            </Grid>
+          </Hidden>
+        </Grid>
+      </Container>
     </>
   );
 };

@@ -6,7 +6,7 @@ import {
   Toolbar,
   InputBase,
   Box,
-  alpha,
+  alpha, Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeSwitch from "../../theme/themeButton";
@@ -18,24 +18,9 @@ export const NavBar = ({ toggleDrawer, toggleTheme }) => {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <Box
-          component="span"
-          sx={{
-            width: "100%",
-            borderRadius: 200,
-            backgroundColor: alpha("#fff", 0.15),
-            overflow: "hidden",
-          }}
-        >
-          <InputBase
-            placeholder="Buscar..."
-            fullWidth
-            startAdornment={<Search />}
-            inputProps={{ "aria-label": "search" }}
-            sx={{ padding: "5px", color: "inherit" }}
-          />
+        <Box flexGrow={2}>
+          <Typography variant="h5" sx={{fontFamily: "Orbitron"}}>Dag2no</Typography>
         </Box>
-
         <Hidden mdDown>
           <Stack direction="row" spacing={5} marginLeft="10px">
             {renderNavButtons()}
@@ -44,9 +29,6 @@ export const NavBar = ({ toggleDrawer, toggleTheme }) => {
 
         <Stack sx={{ marginLeft: 2, }} flexDirection="row">
           <ThemeSwitch toggleTheme={toggleTheme} />
-          <IconButton href="https://github.com/DAg2no">
-            <GitHub/>
-          </IconButton>
         </Stack>
 
         <Hidden mdUp>

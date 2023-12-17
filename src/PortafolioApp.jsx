@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "./theme/themeSettings";
-import { Home, Contact } from "./pages";
+import { Home, Skill } from "./pages";
 import { CustomDrawer, NavBar } from "./components/navbar";
 import { LoandingPage } from "./LoandingPage";
 import { ErrorPage } from "./pages/ErrorPage";
@@ -71,7 +71,7 @@ const PortafolioApp = () => {
                     isDrawerOpen={isDrawerOpen}
                     toggleTheme={toggleTheme}
                   >
-                    <Contact />
+                    <Skill />
                   </Layout>
                 }
                 errorElement={<ErrorPage />}
