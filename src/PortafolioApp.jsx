@@ -11,6 +11,7 @@ import { Projects } from "./pages/Projects";
 const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
   return (
     <>
+    
       <NavBar toggleDrawer={toggleDrawer} toggleTheme={toggleTheme} />
       <CustomDrawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
       {children}

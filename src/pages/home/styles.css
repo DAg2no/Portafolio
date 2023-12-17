@@ -12,9 +12,8 @@
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
-/* Estilos base del Avatar */
+
 .AvatarContainer {
-  border-radius: 10px;
   overflow: hidden; 
   transition: transform 0.3s ease-in-out; 
 }

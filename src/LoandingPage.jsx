@@ -1,5 +1,5 @@
 import Grid from '@mui/material/Grid'
-import Loanding from '../public/Loanding.gif'
+
 
 export const LoandingPage = () => {
   return (
@@ -10,9 +10,9 @@ export const LoandingPage = () => {
       alignItems="center"
       alignContent="center"
       wrap="wrap"
-      
+      mt={23}
     >
-<img src={Loanding} alt="loanding" style={{width: 150, height: 150, borderRadius: 90, marginTop: 200}} />
+     <img src="/Spinner-1s-200px.svg" alt="hola" />
     </Grid>
   )
 }
