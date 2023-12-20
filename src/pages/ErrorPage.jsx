@@ -1,6 +1,6 @@
 import { Avatar, Box, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-import NotFound from "../../public/not-found.gif";
+
 
 export const ErrorPage = () => {
   return (
@@ -17,7 +17,7 @@ export const ErrorPage = () => {
       wrap="wrap"
     >
       <Box>
-        <Avatar src={NotFound} sx={{ width: 200, height: 200 }} />
+        <Avatar src="/not-found.gif" sx={{ width: 200, height: 200 }} />
         <Link
           to="/"
           title="Ir a la página principal"

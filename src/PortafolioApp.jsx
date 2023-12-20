@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "./theme/themeSettings";
-import { Home, Skill } from "./pages";
+import { Home, Projects } from "./pages";
 import { CustomDrawer, NavBar } from "./components/navbar";
 import { LoandingPage } from "./LoandingPage";
 import { ErrorPage } from "./pages/ErrorPage";
-import { Projects } from "./pages/Projects";
 
-const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
+
+ export const Layout = ({ children, toggleDrawer, toggleTheme, isDrawerOpen }) => {
   return (
     <>
     
@@ -45,7 +45,10 @@ const PortafolioApp = () => {
         <CssBaseline />
         <BrowserRouter>
           {isLoading ? (
-            <LoandingPage />
+            <div data-testid="loading-page">
+
+              <LoandingPage  />
+            </div>
           ) : (
             <Routes>
               {/* Home router */}
@@ -57,26 +60,14 @@ const PortafolioApp = () => {
                     isDrawerOpen={isDrawerOpen}
                     toggleTheme={toggleTheme}
                   >
-                    <Home toggleTheme={toggleTheme} />
+                    <Home data-testid="main-content" toggleTheme={toggleTheme}  />
                   </Layout>
                 }
                 errorElement={<ErrorPage />}
               />
 
-              {/* Contact  router */}
-              <Route
-                path="/contact"
-                element={
-                  <Layout
-                    toggleDrawer={toggleDrawer}
-                    isDrawerOpen={isDrawerOpen}
-                    toggleTheme={toggleTheme}
-                  >
-                    <Skill />
-                  </Layout>
-                }
-                errorElement={<ErrorPage />}
-              />
+             
+             
               <Route
                 path="/project"
                 element={

@@ -4,14 +4,12 @@ import {
   IconButton,
   Stack,
   Toolbar,
-  InputBase,
   Box,
-  alpha, Typography,
+ Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeSwitch from "../../theme/themeButton";
 import { renderNavButtons } from "../../helpers/renderNavButtons";
-import { Search, GitHub } from "@mui/icons-material";
 
 
 export const NavBar = ({ toggleDrawer, toggleTheme }) => {
